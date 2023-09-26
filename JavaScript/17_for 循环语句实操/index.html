@@ -1,0 +1,44 @@
+<!--
+ * @Software: Visual Studio Code
+ * @Author: StudentCWZ
+ * @Email: StudentCWZ@outlook.com
+ * @Date: 2023-09-26 16:37:21
+ * @Last Modified by: StudentCWZ
+ * @Description: for 循环语句实操
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>for 循环语句实操</title>
+</head>
+<body>
+    <script>
+        var sum = 0;
+        // 循环输出 1～100 之间数字的和
+        for (var i = 0; i <= 100; i++){
+            // 5050
+            sum += i;
+        }
+        console.log(sum);
+        // 循环输出 1000 以内的奇数：不能被 2 整除的是奇数
+        for (var i = 0; i <= 1000; i++){
+            if (i % 2 != 0){
+                console.log(i);
+            }
+        }
+        // 打印九九乘法表
+        var res = 0;
+        for (var i = 1; i <= 9; i++){
+            document.write("<br>")
+            for (var j = 1; j <= i; j++){
+                res = i * j;
+                document.write(i + "*" + j + "=" + res + " ");
+            }
+        }
+    </script>
+</body>
+</html>
