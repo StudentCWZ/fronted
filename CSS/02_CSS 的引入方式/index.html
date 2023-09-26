@@ -1,0 +1,43 @@
+<!--
+ * @Software: Visual Studio Code
+ * @Author: StudentCWZ
+ * @Email: StudentCWZ@outlook.com
+ * @Date: 2023-09-26 20:14:44
+ * @Last Modified by: StudentCWZ
+ * @Description: Index page
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index page</title>
+    <style>
+        h3{
+            color: blue;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <!--
+        CSS 的引入方式
+            1. 内联样式(行内样式)
+            2. 要使用样式，你需要在相关标签内使用样式(style)属性。Style 属性可以包含任何 CSS 属性
+                - 缺点：缺乏整体性和规划性，不利于维护，维护成本高
+            3. 内部样式
+                - 当单个文档需要特殊的样式时，就应该使用内部样式表。你可以使用 <style> 标签在文档头部
+                  定义内部样式表
+                  - 缺点：单个页面内的 CSS 代码具有统一性和规划性，便于维护，但是在多个页面之间容易混乱
+            4. 外部样式
+                - 当样式需要应用于很多页面时，外部样式表将是理想的选择。在使用外部样式表的情况下，你可以通过
+                  改变一个文件来改变整个站点的外观。每个页面使用 <link> 标签链接到样式表
+    -->
+    <p style="background: orange; font-size: 24px;">我是内联样式的方案</p>
+    <h3>这是内部样式1</h3>
+    <h3>这是内部样式2</h3>
+
+</body>
+</html>
