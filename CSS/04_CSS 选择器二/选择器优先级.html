@@ -1,0 +1,51 @@
+<!--
+ * @Software: Visual Studio Code
+ * @Author: StudentCWZ
+ * @Email: StudentCWZ@outlook.com
+ * @Date: 2023-09-26 21:23:01
+ * @Last Modified by: StudentCWZ
+ * @Description: 选择器优先级
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>选择器优先级</title>
+    <style>
+        .text{
+            color: red;
+            font-size: 30px;
+        }
+        #desc{
+            color: green;
+            font-size: 40px;
+        }
+        .t1{
+            color: red;
+        }
+        .t2{
+            color: green
+        }
+    </style>
+</head>
+<body>
+    <!--
+        选择器的优先级
+            1. CSS 中，权重用数字衡量
+                - 元素选择器的权重为：1
+                - class 选择器的权重为：10
+                - id 选择器的权重为：100
+                - 内联样式的权重为：1000
+                - 优先级从高到底：行内样式 1000 -> ID 选择器 100 -> 类选择器 10 -> 元素选择器 1
+    -->
+    <h3>全局选择器: *</h3>
+    <h3>元素选择器: 标签名称</h3>
+    <h3>类选择器: class 属性名(.)</h3>
+    <h3>ID选择器: id 属性名(#)</h3>
+    <p style="color: blue;font-size: 15px;" class="text" id="desc">我是 p 标签内容</p>
+    <p class="t1 t2">我是测试文本</p>
+</body>
+</html>

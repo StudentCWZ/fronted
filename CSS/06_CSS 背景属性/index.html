@@ -1,0 +1,59 @@
+<!--
+ * @Software: Visual Studio Code
+ * @Author: StudentCWZ
+ * @Email: StudentCWZ@outlook.com
+ * @Date: 2023-09-26 21:25:28
+ * @Last Modified by: StudentCWZ
+ * @Description: 背景属性
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>背景属性</title>
+    <style>
+        .box1 {
+            width: 400px;
+            height: 400px;
+            background-color: #ffff00;
+        }
+        .box2 {
+            width: 600px;
+            height: 600px;
+            background-image: url("1.jpeg");
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            /* background-position: left center; */
+        }
+    </style>
+</head>
+<body>
+    <!--
+        背景属性：背景设置可以更好的衬托内容
+        CSS 背景属性主要有以下几个
+            1. 属性  ===========================>   描述
+                background-color ===============>  设置背景颜色
+                background-image ===============>  设置背景图片
+                background-position ============>  设置图片显示位置
+                background-repeat ===============> 设置背景图片如何填充
+                background-size =================> 设置背景图片大小属性
+            2. background-repeat
+                repeat  ==> 默认值
+                repeat-x ==> 只向水平方向平铺
+                repeat-y ==> 只向垂直方向平铺
+                no-repeat ==> 不平铺
+            3. background-size
+                length ==> 设置背景图片的宽度和高度，第一个值宽度，第二个值高度，如果只是设置一个，第二个值 auto
+                percentage ==> 计算相对位置区域百分比，第一个值宽度，第二个值高度，如果只是设置一个，第二个值 auto
+                cover ==> 保持图片纵横比并将图片缩放成完全覆盖背景区域的最小大小
+                contain ==> 保持图片纵横比并将图片缩放成适合背景定位区域的最大大小
+            4. background-position 该属性设置背景图像的起始位置，其默认值时：0%，0%
+    -->
+    <div class="box1"></div>
+    <div class="box2"></div>
+
+</body>
+</html>
