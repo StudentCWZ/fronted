@@ -1,0 +1,33 @@
+<!--
+ * @Software: Visual Studio Code
+ * @Author: StudentCWZ
+ * @Email: StudentCWZ@outlook.com
+ * @Date: 2023-09-26 19:20:45
+ * @Last Modified by: StudentCWZ
+ * @Description: 字符串方法 substr()
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>字符串方法 substr()</title>
+</head>
+<body>
+    <script>
+        // substr() 方法用于从原字符串取出子字符串并返回，不改变原字符串。跟 substring() 方法的作用相同
+        // substr() 方法的第一个参数是子字符串的开始位置(从 0 开始计算)，第二个参数是子字符串的长度
+        var str = "itbaizhan";
+        var res = str.substr(2, 7);
+        console.log(res);
+        // 如果省略第二个参数，则表示子字符串一直到原字符串的结束
+        console.log(str.substr(2));
+        // 如果第一个参数是负数，表示倒数计算的字符位置。如果第二个参数是负数，将被自动转为 0，因此会返回空字符串
+        var str2 = "hello world"
+        console.log(str2.substr(-5))
+        console.log(str2.substr(2, -1));// ""
+    </script>
+</body>
+</html>

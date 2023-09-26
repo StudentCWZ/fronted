@@ -1,0 +1,32 @@
+<!--
+ * @Software: Visual Studio Code
+ * @Author: StudentCWZ
+ * @Email: StudentCWZ@outlook.com
+ * @Date: 2023-09-26 18:41:57
+ * @Last Modified by: StudentCWZ
+ * @Description: 字符串方法 charAt()
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>字符串方法 charAt()</title>
+</head>
+<body>
+    <script>
+        // chatAt() 方法返回指定位置的字符，参数是从 0 开始编号的
+        var str = "itbaizhan";
+        console.log(str);
+        console.log(str.charAt(4)); // i
+        // 打印出最后一个字符
+        console.log(str.charAt(8)); // n
+        console.log(str.charAt(str.length - 1)); //n
+        // 如果参数为负数，或者大于等于字符串的长度， charAt() 返回空字符串
+        console.log(str.charAt(-2)); // ""
+        console.log(str.charAt(12)); // ""
+    </script>
+</body>
+</html>

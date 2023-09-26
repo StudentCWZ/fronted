@@ -1,0 +1,33 @@
+<!--
+ * @Software: Visual Studio Code
+ * @Author: StudentCWZ
+ * @Email: StudentCWZ@outlook.com
+ * @Date: 2023-09-26 19:49:56
+ * @Last Modified by: StudentCWZ
+ * @Description: 字符串方法 split()
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>字符串方法 split()</title>
+</head>
+<body>
+    <script>
+        // split() 方法按照给定规则分割字符串，返回一个由分割出来得到子字符串组成的数组
+        var str1  = "it|sxt|baizhan";
+        console.log(str1.split("|")); // ["it", "sxt", "baizhan"]
+        // 如果分割规则是空字符串，则返回数组的成员是原字符串的每一个字符
+        var str2  = "s|x|t";
+        console.log(str2.split("")); // ["s", "|", "x", "|", "t"]
+        // 如果省略参数，则返回数组的唯一成员就是原字符串
+        console.log(str2.split()); // ["s|x|t"]
+        // split() 方法还可以接受第二个参数，限定返回数组的最大成员数
+        var str3 = "itbaizhan"
+        console.log(str2.split("", 5)); // ["i", "t", "b", "a", "i"]
+    </script>
+</body>
+</html>

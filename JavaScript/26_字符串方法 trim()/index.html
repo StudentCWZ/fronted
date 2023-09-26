@@ -1,0 +1,33 @@
+<!--
+ * @Software: Visual Studio Code
+ * @Author: StudentCWZ
+ * @Email: StudentCWZ@outlook.com
+ * @Date: 2023-09-26 19:20:45
+ * @Last Modified by: StudentCWZ
+ * @Description: 字符串方法 trim()
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>字符串方法 trim()</title>
+</head>
+<body>
+    <script>
+        // trim() 方法用于去除字符串两端的空格，返回一个新的字符串，不改变原字符串
+        var str = "  itbaizhan ";
+        console.log(str.trim());
+        // 该方法去除的不仅是空格，还包括制表符(\t、\v)、换行符(\n)和回车符(\r)
+        var str2 = "\r\titbaizhan\t";
+        console.log(str2.trim());
+        // ES6 扩展方法，trimEnd() 和 trimStart() 方法
+        var str3 = " itbaizhan";
+        console.log(str3.trimStart()); // 去掉头部空格
+        var str4 = "itbaizhan ";
+        console.log(str4.trimEnd()); // 去掉尾部空格
+    </script>
+</body>
+</html>
