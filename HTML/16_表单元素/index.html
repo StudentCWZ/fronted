@@ -1,0 +1,41 @@
+<!--
+ * @Software: Visual Studio Code
+ * @Author: StudentCWZ
+ * @Email: StudentCWZ@outlook.com
+ * @Date: 2023-09-26 21:42:12
+ * @Last Modified by: StudentCWZ
+ * @Description: 表单元素
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>表单元素</title>
+</head>
+
+<body>
+    <!--
+        文本框
+            文本域通过 <input type="text"> 标签设定，当用户要在表单中键入字母、数字等内容时，就会用到文本域\
+        密码框
+            密码字段通过 <input type="password"> 来定义(密码字段字符不会明文显示，而是以星号或圆点替代)
+        提交按钮
+            当用户单击确认按钮时，表单的内容会被传送到另一个文件。表单的动作属性定义了目的文件的文件名。
+            由动作属性定义的这个文件通常会对接收到的输入数据进行相关的处理
+    -->
+    <form>
+        <input type="text">
+        <input type="submit">
+    </form>
+    <form>
+        用户名: <input type="text">
+        密码: <input type="password">
+        <input type="submit" value="登录">
+    </form>
+</body>
+
+</html>

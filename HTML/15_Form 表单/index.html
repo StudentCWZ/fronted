@@ -1,0 +1,49 @@
+<!--
+ * @Software: Visual Studio Code
+ * @Author: StudentCWZ
+ * @Email: StudentCWZ@outlook.com
+ * @Date: 2023-09-26 21:39:40
+ * @Last Modified by: StudentCWZ
+ * @Description: Form 表单
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form 表单</title>
+</head>
+
+<body>
+    <!--
+        表单在 web 页面中用来给用户填写信息，从而能采用户信息，使得网页具有交互的功能。
+        所有的用户输入内容的地方都用表单来写，如登录注册、搜索框
+        表单是由容器和控件组成的，一个表单一般应该包含用户填写信息的输入框，提交按钮等，这些输入框，这些输入框，
+        按钮叫做控件，表单就是容器，它能够容纳各种各样的控件
+    -->
+    <form action="url" method="get|post" name="form"></form>
+    <!--
+        属性说明：
+            1. action 服务器地址
+            2. name 表单
+        method 中 Get 和 Post 的区别
+            1. 数据提交方式，get 把提交的数据 url 可以看到，post 看不到
+            2. get 一般用于提交少量数据，post 用来提交大量数据
+    -->
+    <!--
+        一个完整的表单包含三个基本组成部分：表单标签、表单域、表单按钮
+            1. 表单标签
+            2. 表单域
+            3. 表单按钮
+    -->
+    <form>
+        <input type="text">
+        <input type="submit">
+    </form>
+
+</body>
+
+</html>

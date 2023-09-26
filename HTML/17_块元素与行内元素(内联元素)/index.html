@@ -1,0 +1,51 @@
+<!--
+ * @Software: Visual Studio Code
+ * @Author: StudentCWZ
+ * @Email: StudentCWZ@outlook.com
+ * @Date: 2023-09-26 21:43:28
+ * @Last Modified by: StudentCWZ
+ * @Description: 块元素与行内元素(内联元素)
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>块元素与行内元素(内联元素)</title>
+</head>
+
+<body>
+    <!--
+        HTML5 出现之前，经常把元素按照块级元和内联元素来区分。在 HTML5 中，元素不再按照这种方式来区分，
+        而是按照内容模型来区分，分为元元数据型、区块型、标题型、文档流型、语句型、内嵌型、交互型。
+        元素不属于任何一个类别，被称为穿透的，元素可能属于不止一个类别，称为混合的。
+        虽然到了 HTML5 的版本，元素分类更细致了，但是这对初学者并不友好，所以我们仍然按照块元素和内联元素做区分，这对我们的布局起到了至关重要的作用
+        块级元素特点
+            - 块级元素会在页面中独占一行(自上向下垂直排列)
+            - 可以设置 width、height 属性
+            - 一般块级元素可以包含行内元素和其他块级元素
+        内联元素特点
+            - 行内元素不会独占页面中一行，只占自身大小
+            - 行内元素设置 width、height 属性无效
+            - 一般内联元素包含内联元素不包含块级元素
+        常见块级元素：div、form、h1~h6、hr、p、table、ul 等
+        常见内联元素(行内元素)：a、b、em、i、span、strong 等
+        行内块级元素：button、img、input 等(不换行、能够识别宽高)
+    -->
+    <h1>标题</h1>
+    <p>段落</p>
+    <ul>
+        <li>列表1</li>
+        <li>列表2</li>
+    </ul>
+    <a href="#">超链接</a>
+    <span>内容</span>
+    <em>注重语气</em>
+    <!--行内块级元素：button、img、input 等(不换行、能够识别宽高)-->
+    <img src="1.jpeg" alt="" width="200px">
+</body>
+
+</html>
