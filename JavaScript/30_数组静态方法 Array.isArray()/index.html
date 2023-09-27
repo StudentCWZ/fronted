@@ -1,0 +1,32 @@
+<!--
+ * @Software: Visual Studio Code
+ * @Author: StudentCWZ
+ * @Email: StudentCWZ@outlook.com
+ * @Date: 2023-09-27 09:21:17
+ * @Last Modified by: StudentCWZ
+ * @Description: 数组的静态方法 Array.isArray()
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>数组的静态方法 Array.isArray()</title>
+</head>
+
+<body>
+    <script>
+        // Array.isArray() 方法返回一个布尔值，表示参数是否为数组。它可以弥补 typeof 运算符的不足
+        var num = 10;
+        console.log(typeof (num)); // number
+        var arr = [10, 20, 30];
+        console.log(typeof (arr)); // object 数组的关键字：Array
+        console.log(Array.isArray(arr)); // true: 是数组
+        console.log(Array.isArray(num)); // false: 不是数组
+    </script>
+</body>
+
+</html>

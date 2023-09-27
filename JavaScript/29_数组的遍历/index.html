@@ -1,0 +1,41 @@
+<!--
+ * @Software: Visual Studio Code
+ * @Author: StudentCWZ
+ * @Email: StudentCWZ@outlook.com
+ * @Date: 2023-09-27 09:10:34
+ * @Last Modified by: StudentCWZ
+ * @Description: 数组的遍历
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>数组的遍历</title>
+</head>
+
+<body>
+    <script>
+        // 数组的遍历可以考虑 for 循环或 while 循环
+        var users = ["Jack", "Mack", "John"];
+        // for 循环 -> 遍历
+        for (i = 0; i < users.length; i++) {
+            console.log(users[i]);
+        }
+        // while 循环 -> 遍历
+        var i = 0;
+        while (i < users.length) {
+            console.log(users[i]);
+            i++;
+        }
+        // for ... in 遍历数组
+        for (var index in users) {
+            console.log(users[index]);
+        }
+    </script>
+</body>
+
+</html>
