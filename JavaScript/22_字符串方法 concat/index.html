@@ -9,15 +9,17 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>字符串方法 contact</title>
+    <title>字符串方法 concat</title>
 </head>
+
 <body>
     <script>
-        // contact 方法用于连接两个字符串，返回一个新的字符串，不改变原字符串
+        // concat 方法用于连接两个字符串，返回一个新的字符串，不改变原字符串
         var str1 = "Hello";
         var str2 = "World";
         var str3 = "！";
@@ -25,21 +27,22 @@
         console.log(res);
         // 该方法可以接受多个参数
         console.log(str1.concat(str2, str3));
-        // 如果参数不是字符串，contact 方法会将其先转为字符串，然后再连接
+        // 如果参数不是字符串，concat 方法会将其先转为字符串，然后再连接
         var num = 100;
         console.log(str1.concat(str2, str3, num));
-        // 咱们做字符串相加，是不需要使用 contact 的，可以使用 + 连接字符串
+        // 咱们做字符串相加，是不需要使用 concat 的，可以使用 + 连接字符串
         var result = str1 + str2 + str3 + num;
         console.log(result);
         // 举例
         var one = 1;
         var two = 2;
         var three = '3';
-        // contact 和加号还是有区别的
-        // contact 不管什么类型直接合并成字符串
+        // concat 和加号还是有区别的
+        // concat 不管什么类型直接合并成字符串
         // 加号是遇到数字类型之介做运算，遇到字符串和字符串相连接
         console.log(''.concat(one, two, three));
         console.log(one + two + three);
     </script>
 </body>
+
 </html>

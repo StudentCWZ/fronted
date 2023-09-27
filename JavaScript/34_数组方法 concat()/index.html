@@ -1,0 +1,40 @@
+<!--
+ * @Software: Visual Studio Code
+ * @Author: StudentCWZ
+ * @Email: StudentCWZ@outlook.com
+ * @Date: 2023-09-27 10:12:27
+ * @Last Modified by: StudentCWZ
+ * @Description: 数组方法 concat()
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>数组方法 concat</title>
+</head>
+
+<body>
+    <script>
+        // concat() 方法用于多个数组的合并，它将新数组的成员，添加到原数组成员的后部，然后返回一个新数组，原数组不变
+        var arr1 = ["尚学堂", "百战程序员"];
+        var arr2 = ["sxt", "itbaizhan"];
+        var arr3 = ["Python", "Golang"]
+        console.log(arr1 + arr2); // 转成字符串
+        console.log(arr1.concat(arr2, arr3));
+        console.log(arr1);
+        console.log(arr2);
+        console.log(arr3);
+        // 除了数组作为参数， concat() 也接受其他类型的值作为参数，添加到目标数组尾部
+        var arr4 = [10];
+        console.log(arr4.concat(20, 30, 40)); // [10, 20, 30, 40]
+        // 应用场景：上拉加载，合并数据
+        var arr5 = [1, 2, 3].concat(4, 5, 6, [7, 8, 9]);
+        console.log(arr5); // [1, 2, 3, 4, 5, 6, 7, 8, 9]
+    </script>
+</body>
+
+</html>
