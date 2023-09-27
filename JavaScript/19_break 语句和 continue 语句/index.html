@@ -9,18 +9,20 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>break 语句和 continue 语句</title>
 </head>
+
 <body>
     <script>
         // break 语句和 continue 语句都具有跳转作用，可以让代码不按既有的顺序执行
         // break 语句用于跳出代码块或循环
         // 需求：如果 i 的值 = 5，则不在继续执行下去
-        for (var i = 0; i < 100; i++){
+        for (var i = 0; i < 100; i++) {
             if (i === 5) {
                 // 跳出循环
                 break;
@@ -28,7 +30,7 @@
             console.log(i);
         }
         // continue 语句用于终止本轮循环，返回循环结构的头部，开启下一轮循环
-        for (var i = 0; i < 100; i++){
+        for (var i = 0; i < 100; i++) {
             if (i === 5) {
                 // 跳出当前循环，进行下一次循环
                 continue;
@@ -37,4 +39,5 @@
         }
     </script>
 </body>
+
 </html>
