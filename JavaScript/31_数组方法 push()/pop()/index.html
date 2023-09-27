@@ -1,0 +1,36 @@
+<!--
+ * @Software: Visual Studio Code
+ * @Author: StudentCWZ
+ * @Email: StudentCWZ@outlook.com
+ * @Date: 2023-09-27 09:30:24
+ * @Last Modified by: StudentCWZ
+ * @Description: 数组方法 push()/pop()
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>数组方法 push()/pop()</title>
+</head>
+
+<body>
+    <script>
+        // push() 方法用于在数组的末端添加一个或多个元素，并返回添加新元素后的数组长度。注意，该方法会改变原数组
+        var arr = ["hello"];
+        // 通过下标添加数据
+        // arr[1] = "大家好";
+        var arrLength = arr.push("大家好");
+        console.log(arr);
+        console.log(arrLength);
+        // pop() 方法用于删除数组的最后一个元素，并返回该元素。注意，该方法会改变原数组
+        var intArr = [100, 200, 300];
+        intArr.pop();
+        console.log(intArr); // [100, 200]
+    </script>
+</body>
+
+</html>
