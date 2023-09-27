@@ -1,0 +1,46 @@
+<!--
+ * @Software: Visual Studio Code
+ * @Author: StudentCWZ
+ * @Email: StudentCWZ@outlook.com
+ * @Date: 2023-09-27 08:37:48
+ * @Last Modified by: StudentCWZ
+ * @Description: 数组
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>数组</title>
+</head>
+
+<body>
+    <script>
+        // 数组就像收纳箱，可以帮你存储各种物品
+        // 数组(array) 是按次序排列的一组值，每个值的位置都有编号(从 0 开始)，整个数组用方括号表示。
+        // 两端的方括号是数组的标志。(位置也被称为下标)
+        var arr = ["sxt", "baizhan", "it"];
+        // 除了在定义时赋值，数组也可以先定义后赋值
+        var names = [];
+        names[0] = "Jack";
+        names[1] = "Mark";
+        console.log(names);
+        // 任何类型的数据，都可以放入数组
+        var mixArr = [100, [1, 2, 3], false];
+        console.log(mixArr);
+        // 如果数组的元素还是数组，就形成了多维数组
+        var res = [[1, 2], [3, 4]];
+        console.log(res[0][1]) // 2
+        console.log(res[1][1]) // 4
+        // 下标：赋值，读取
+        var users = ["Jack", "Mack", "John"];
+        console.log(users[1]);
+        // length 属性
+        console.log(users.length); // 3
+    </script>
+</body>
+
+</html>
