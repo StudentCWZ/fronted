@@ -27,7 +27,7 @@
             var x = 10;
             var y = 20;
             console.log(x + y);
-        }
+        };
         add(); // 函数调用(函数可复用)
         // 函数名的提升
         // JavaScript 引擎将函数名视同变量名，所以采用 function 命令声明函数时，整个函数会像变量声明一样，被提升到代码头部
@@ -35,13 +35,13 @@
         // 函数运行的时候，有时需要提供外部数据，不同的外部数据会得到不同的结果，这种外部数据就叫参数
         function square(x) {
             console.log(x * x);
-        }
+        };
         square(3);
         // 函数返回值
         // JavaScript 函数提供了两个接口实现与外界的交互，其中参数作为入口，接收外界信息；返回值作为出口，把运算结果反馈给外界
         function getName(name) {
-            return name
-        }
+            return name;
+        };
         var myName = getName("Jack");
         console.log(myName); // "Jack"
         // tip: return 后面不能再添加任何代码，因为不会再执行

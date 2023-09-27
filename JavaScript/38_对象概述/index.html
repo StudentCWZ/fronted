@@ -1,0 +1,49 @@
+<!--
+ * @Software: Visual Studio Code
+ * @Author: StudentCWZ
+ * @Email: StudentCWZ@outlook.com
+ * @Date: 2023-09-27 19:51:05
+ * @Last Modified by: StudentCWZ
+ * @Description: 对象概述
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>对象概述</title>
+</head>
+
+<body>
+    <script>
+        // 什么是对象？对象(Object) 是 JavaScript 语言的核心概念，也是最重要的数据类型
+        // 简单说，对象就是一组 "键值对"(key-value) 的集合，是一种无序的复合数据集合
+        var user = {
+            name: "Jack",
+            age: 18,
+            job: ["sxt"],
+            flag: true
+        };
+        // 对象的每一个键名又称为属性(property)，它的 "键值" 可以是任何数据类型。如果一个属性的值为函数，通常把这个属性称为"方法"，它可以像函数那样调用
+        var classmate = {
+            getName: function (name) {
+                return name;
+            }
+        };
+        // 对象的读取方式：对象名.属性
+        console.log(classmate.getName("Jack"));
+        // 如果属性的值还是一个对象，就形成了链式引用
+        var fruit = {
+            name: "苹果",
+            style: {
+                color: "red"
+            }
+        };
+        console.log(fruit.style.color);
+    </script>
+</body>
+
+</html>
