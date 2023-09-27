@@ -1,0 +1,38 @@
+<!--
+ * @Software: Visual Studio Code
+ * @Author: StudentCWZ
+ * @Email: StudentCWZ@outlook.com
+ * @Date: 2023-09-27 10:34:09
+ * @Last Modified by: StudentCWZ
+ * @Description: 数组方法 indexOf()
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>数组方法 indexOf()</title>
+</head>
+
+<body>
+    <script>
+        // indexOf() 方法返回给定元素在数组中第一次出现位置，如果没有出现则返回 -1；
+        var arr = [10, 20, 30, 40];
+        // 判断数组中是否存在 30
+        console.log(arr.indexOf(30)); // 2
+        console.log(arr.indexOf(60)); // -1
+        if (arr.indexOf(30) > -1) {
+            console.log("存在");
+        } else {
+            console.log("不存在");
+        }
+        // indexOf() 方法还可以接受第二个参数，表示搜索的开始位置
+        console.log(arr.indexOf(20)); // 1
+        console.log(arr.indexOf(20, 3)); // -1
+    </script>
+</body>
+
+</html>
