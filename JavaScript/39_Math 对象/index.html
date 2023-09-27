@@ -1,0 +1,44 @@
+<!--
+ * @Software: Visual Studio Code
+ * @Author: StudentCWZ
+ * @Email: StudentCWZ@outlook.com
+ * @Date: 2023-09-27 22:54:45
+ * @Last Modified by: StudentCWZ
+ * @Description: Math 对象
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math 对象</title>
+</head>
+
+<body>
+    <script>
+        // Math.abs() 方法返回参数值的绝对值
+        var num = -100;
+        console.log(Math.abs(num)); // 100
+        // Math.max() 方法返回参数之中最大的那个值，Math.min() 返回最小的那个值。如果参数为空，Math.min 返回 Infinity，Math.max 返回 -Infinity
+        console.log(Math.max(10, 20, 30)); // 30
+        console.log(Math.min(10, 20, 30)); // 10
+        // Math.floor() 方法返回小于参数的最大整数
+        console.log(Math.floor(3.2)); // 3
+        console.log(Math.floor(-3.2)); // -4
+        // Math.ceil() 方法返回大于参数的最大整数
+        console.log(Math.ceil(3.2)); // 4
+        console.log(Math.ceil(-3.2)); // -3
+        // Math.random() 方法返回 0 到 1 之间的一个伪随机数，可能等于 0，但一定小于 1
+        console.log(Math.random())
+        // 任意范围的随机数生成函数如下
+        function getRandomArbitrary(min, max) {
+            return Math.random() * (max - min) + min;
+        };
+        console.log(getRandomArbitrary(10, 20));
+    </script>
+</body>
+
+</html>
