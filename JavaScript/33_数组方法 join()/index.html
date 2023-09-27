@@ -1,0 +1,40 @@
+<!--
+ * @Software: Visual Studio Code
+ * @Author: StudentCWZ
+ * @Email: StudentCWZ@outlook.com
+ * @Date: 2023-09-27 09:55:59
+ * @Last Modified by: StudentCWZ
+ * @Description: 数组方法 join()
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>数组方法 join()</title>
+</head>
+
+<body>
+    <script>
+        // join() 方法以指定参数作为分隔符，将所有数组成员连接为一个字符串返回。如果不提供参数，默认用逗号分隔
+        var arr = [10, 20, 30];
+        console.log(arr.join()); // "10,20,30"
+        console.log(arr.join("|")); // "10|20|30"
+        console.log(arr.join("")); // "102030"
+        console.log(arr.join(" ")); // "10 20 30"
+        // 如果数组成员是 undefined 或 null 或空位，会被转成空字符串
+        var arr1 = [null, undefined];
+        console.log(arr1.join("#")); // "#"
+        console.log(["a", , "b"].join('-')); // "a--b"
+        // 数组的 join() 配合字符串的 split() 可以实现数组与字符串的互换
+        var arr2 = ["hello", "world"];
+        var res = arr2.join(" ");
+        console.log(res); // "hello world"
+        console.log(res.split(" ")); // ["hello", "world"]
+    </script>
+</body>
+
+</html>
