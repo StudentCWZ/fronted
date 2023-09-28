@@ -1,0 +1,64 @@
+<!--
+ * @Software: Visual Studio Code
+ * @Author: StudentCWZ
+ * @Email: StudentCWZ@outlook.com
+ * @Date: 2023-09-28 20:44:39
+ * @Last Modified by: StudentCWZ
+ * @Description: Date 对象
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date 对象</title>
+</head>
+
+<body>
+    <script>
+        // Date 对象是 JavaScript 原生的时间库。它以 1970 年 1 月 1 日 00:00:00 作为时间的零点，可以表示的时间范围是前后各 1 亿天(单位为毫秒)
+        // Date.now() 方法返回当前时间距离零点(1970 年 1 月 1 日 00:00:00 UTC) 的毫秒数，相当于 Unix 时间戳乘以 1000
+        console.log(Date.now()); // 1653290041486
+        // 时间戳是指格林威治时间 1970 年 01 月 01 日 00 时 00 分 00 秒(北京时间 1970 年 01 月 01 日 08 时 00 分 00 秒)起至现在的总秒数
+        // 格林威治和北京就是时区不同
+        // Unix 事 20 世纪 70 年代初出现的一个操作系统，Unix 认为 1970 年 1 月 1 日 0 点是时间纪元。JavaScript 也就遵循乐这一约束
+        // Date 对象提供了一系列 get* 方法，用来获取实例对象某个方面的值
+        console.log(new Date(1653290041486));
+        console.log(new Date()); // 最新时间
+        // getTime(): 返回实例距离 1970 年 1 月 1 日 00:00:00 的毫秒数
+        // getDate(): 返回实力实例对象对应每个月的几号(从 1 开始)
+        console.log(new Date().getDate());
+        // getDay(): 返回星期几，星期日为 0，星期一为 1，以此类推
+        console.log(new Date().getDay());
+        // getYear(): 返回距离 1900 的年数
+        // getFullYear(): 返回四位的年份
+        console.log(new Date().getFullYear());
+        // getMonth(): 返回月份(0 表示 1 月，11 表示 12 月)
+        console.log(new Date().getMonth() + 1);
+        // getHours(): 返回小时数(0-23)
+        // getMilliseconds() 返回毫秒(0-999)
+        // getMinutes(): 返回分钟数(0-59)
+        // getSeconds(): 返回秒数(0-59)
+        // 2030-1-1 19:00:00
+        var year = new Date().getFullYear();
+        var month = new Date().getMonth() + 1;
+        var day = new Date().getDate();
+        var hour = new Date().getHours();
+        var minute = new Date().getMinutes();
+        var second = new Date().getSeconds();
+        console.log(year + "-" + month + "-" + day + " " + hour + ":" + minute + ":" + second);
+        // 编写函数获得本年度剩余天数
+        function leftDays() {
+            var today = new Date();
+            var endYear = new Date(today.getFullYear(), 11, 31, 23, 59, 59, 999);
+            var msPerDay = 24 * 60 * 60 * 1000;
+            return Math.round((endYear.getTime() - today.getTime()) / msPerDay);
+        };
+        console.log(leftDays());
+    </script>
+</body>
+
+</html>
