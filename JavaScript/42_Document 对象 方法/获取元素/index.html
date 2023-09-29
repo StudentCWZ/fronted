@@ -1,0 +1,36 @@
+<!--
+ * @Software: Visual Studio Code
+ * @Author: StudentCWZ
+ * @Email: StudentCWZ@outlook.com
+ * @Date: 2023-09-29 18:50:40
+ * @Last Modified by: StudentCWZ
+ * @Description: Document 对象(方法/获取元素)
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document 对象(方法/获取元素)</title>
+</head>
+
+<body>
+    <div>Hello1</div>
+    <div>Hello2</div>
+    <script>
+        /*
+            document.getElementByTagName() 方法搜索 HTML 标签名，返回符合条件的元素。它的返回值是一个类似数组对象(HTMLCollection 实例)，可以实时反映 HTML 文档的变化。
+            如果没有任何匹配的元素，就返回一个空集
+            如果传入 *，就可以返回文档中所有 HTML 元素
+        */
+
+        var div1 = document.getElementsByTagName("div")[0];
+        div1.innerHTML = "Hello, world!"
+        console.log(div1);
+    </script>
+</body>
+
+</html>
