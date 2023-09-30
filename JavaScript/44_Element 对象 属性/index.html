@@ -1,0 +1,58 @@
+<!--
+ * @Software: Visual Studio Code
+ * @Author: StudentCWZ
+ * @Email: StudentCWZ@outlook.com
+ * @Date: 2023-09-30 17:17:49
+ * @Last Modified by: StudentCWZ
+ * @Description: Element 对象(属性)
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Element 对象(属性)</title>
+</head>
+
+<body>
+    <div class="box" id="root">Hello</div>
+    <script>
+        // Element 对象对应网页的 HTML 元素，每一个元素 HTML 元素，在 DOM 树上都会转化成一个 Element 节点对象
+        // Element.id
+        // Element.id 属性返回指定元素的 id 属性，该属性可读写
+        var root = document.getElementById("root");
+        root.id = "roots";
+        console.log(root.id);
+        // Element.className 属性用来读写当前元素节点的 class 属性。它的值是一个字符串，每个 class 之间用空格分割
+        console.log(root.className); // box
+        root.className = "myBox";
+        console.log(root.className); // myBox
+        // Element.classList 对象有下列方法
+        // add(): 增加一个 class
+        // remove(): 减少一个 class
+        // contains(): 检查当前元素是否包含某个 class
+        // toggle(): 将某个 class 移入或移出当前元素。
+        console.log(root.classList.add("box1"));
+        console.log(root.classList.remove("box1"));
+        if (root.classList.contains("box")) {
+            console.log("有");
+        } else {
+            console.log("无");
+        }
+        // Element.innerHTML 属性返回一个字符串，等同于该元素包含的所有 HTML 代码。该属性可读写，常用来设置某个节点的内容。它能改写所有元素节点的内容，包括 <HTML> 和 <body> 元素
+        console.log(root.innerHTML = "Hello world!");
+        // Element.innerText 和 Element.innerHTML 类似，不同的是 innerText 无法识别元素，会直接渲染成字符串
+        console.log(root.innerText = "哈哈哈！");
+        // innerHTML 和 innerText 的区别：
+        // innerHTML 可以识别标签
+        // innerText 会把标签识别成一个字符串
+        var str = "<a href='https://www.itbaizhan.com'>百战</a>"
+        root.innerHTML = str // 自己看区别
+        root.innerText = str
+    </script>
+</body>
+
+</html>
