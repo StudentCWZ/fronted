@@ -1,0 +1,48 @@
+<!--
+ * @Software: Visual Studio Code
+ * @Author: StudentCWZ
+ * @Email: StudentCWZ@outlook.com
+ * @Date: 2023-09-30 16:55:07
+ * @Last Modified by: StudentCWZ
+ * @Description: Document 对象(方法/创建元素)
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="nav">导航</div>
+    <div id="container"></div>
+
+    <script>
+        // document.createElement() 方法用来生成元素节点，并返回该节点
+        var text = document.createElement("p");
+        console.log(text);
+        // document.createTextNode() 方法用来生成文本节点(Text 实例)，并返回该节点。它的参数是文本节点内容。
+        var content = document.createTextNode("我是文本");
+        console.log(content);
+        // appendChild: 将内容或者子元素放在容器中
+        text.appendChild(content);
+        console.log(text);
+        // document.createAttribute 方法生成一个新的属性节点(Attr 实例)，并返回它
+        var id = document.createAttribute("id")
+        console.log(id);
+        id.value = "root";
+        console.log(id);
+        text.setAttributeNode(id);
+        console.log(text);
+        var container = document.getElementById("container");
+        console.log(container);
+        container.appendChild(text);
+        console.log(container);
+    </script>
+</body>
+
+</html>
