@@ -1,0 +1,46 @@
+<!--
+ * @Software: Visual Studio Code
+ * @Author: StudentCWZ
+ * @Email: StudentCWZ@outlook.com
+ * @Date: 2023-10-02 08:44:18
+ * @Last Modified by: StudentCWZ
+ * @Description: JavaScript 变量
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript 变量</title>
+</head>
+
+<body>
+    <script>
+        /*
+            变量本质(固定空间) = 停车位
+            变量名(通过名字操作空间) = 车位编号
+            数据(变化的量) = 车
+        */
+        var num = 10;
+        var age = 20;
+        // 变量的重新赋值
+        num = 30;
+        // 打印
+        console.log(num);
+        /*
+            变量的提升：
+                JavaScript 引擎的工作方式是，先解析代码，获取所有被声明的变量，然后再一行行地运行。这造成的结果，就是所有变量
+                的声明语句，都会被提升到代码的头部，这就叫做变量提升(hoisting)
+        */
+        console.log(username); // undefined
+        var username = "jack";
+        /*
+            上述代码等价于： var username; console.log(username); username = "jack";
+        */
+    </script>
+</body>
+
+</html>
