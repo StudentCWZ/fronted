@@ -1,0 +1,48 @@
+<!--
+ * @Software: Visual Studio Code
+ * @Author: StudentCWZ
+ * @Email: StudentCWZ@outlook.com
+ * @Date: 2023-10-04 08:48:03
+ * @Last Modified by: StudentCWZ
+ * @Description: 运算符之算数运算符
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>运算符之算数运算符</title>
+</head>
+
+<body>
+    <script>
+        // 加减乘除运算符
+        // 加减乘除运算就是基本的数学运算符效果
+        var num1 = 100;
+        var num2 = 10;
+        // 加法
+        console.log(num1 + num2); // 110
+        console.log(num1 - num2); // 90
+        console.log(num1 * num2); // 1000
+        console.log(num1 / num2); // 10
+        // 余数运算符是比较常用的，因为在逻辑思维上寻找规律，余数运算符是很好用的。
+        console.log(num1 % num2); // 0
+        // 自增和自减运算符
+        // 自增和自减运算符，是一元运算符，只需要一个运算子，他们的作用是将运算子首先转为数值，然后加上 1 或者减去 1
+        var num3 = 20;
+        console.log(++num3); // 21
+        console.log(--num3); // 20
+        // 自增或者自减运算符有一个需要注意的地方，就是放在变量之后，会返回变量操作前的值，再进行自增/自减操作；放在变量之前，会先进行自增/自减操作，再返回变量操作后的值
+        // 自增和自减有两种写法：++num、num++
+        // ++ 在前，先自增再运算；++在后，先运算再自增
+        var num4 = 10;
+        // console.log(++num4); // 11
+        console.log(num4++); // 10
+        console.log(num4); // 11
+    </script>
+</body>
+
+</html>
