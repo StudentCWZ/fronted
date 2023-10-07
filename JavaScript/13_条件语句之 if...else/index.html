@@ -1,0 +1,63 @@
+<!--
+ * @Software: Visual Studio Code
+ * @Author: StudentCWZ
+ * @Email: StudentCWZ@outlook.com
+ * @Date: 2023-10-07 09:18:43
+ * @Last Modified by: StudentCWZ
+ * @Description: 条件语句之 if ...else
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>条件语句之 if ...else</title>
+</head>
+
+<body>
+    <script>
+        // if ... else 基本结构
+        // if 代码块后面，还可以跟一个 else 代码块，表示不满足条件时，所要执行的代码
+        var flag = true;
+        if (flag) {
+            console.log("我是孙悟空");
+        } else {
+            console.log("不，你是六耳猕猴");
+        }
+        // 多个 if ... else 连接
+        // 对同一个变量进行多次判断时候，多个 if ... else 语句可以连写在一起
+        // 0-6: 一周的 7 天
+        var day = 3; // 周四
+        if (day === 0) {
+            console.log("今天星期一");
+        } else if (day === 1) {
+            console.log("今天星期二");
+        } else if (day === 2) {
+            console.log("今天星期三");
+        } else if (day === 3) {
+            console.log("今天星期四");
+        } else if (day === 4) {
+            console.log("今天星期五");
+        } else if (day === 5) {
+            console.log("今天星期六");
+        } else {
+            console.log("今天星期日");
+        }
+        var eat = true;
+        var food = "猪肉炖粉条"
+        if (eat) {
+            if (food === "猪肉炖粉条") {
+                console.log("猪肉炖粉条");
+            } else {
+                console.log("拍黄瓜");
+            }
+        } else {
+            console.log("我不吃饭");
+        }
+    </script>
+</body>
+
+</html>
