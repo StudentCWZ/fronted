@@ -1,0 +1,52 @@
+<!--
+ * @Software: Visual Studio Code
+ * @Author: StudentCWZ
+ * @Email: StudentCWZ@outlook.com
+ * @Date: 2023-10-10 09:21:54
+ * @Last Modified by: StudentCWZ
+ * @Description: 事件处理程序
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>事件处理程序</title>
+</head>
+
+<body>
+    <button onClick="clickHandle()">按钮</button>
+    <button id="btn">按钮</button>
+    <button id="btn1">按钮</button>
+    <script>
+        // 事件处理程序分为：HTML 事件处理、DOM0 级事件处理、DOM2 级事件处理
+        function clickHandle() {
+            // HTML 事件处理
+            // HTML 事件缺点：HTML 和 JS 没有分开
+            console.log("点击了按钮");
+        }
+        var btn = document.getElementById("btn");
+        btn.onclick = function () {
+            // DOM0 级事件处理
+            // DOM0 级事件优点：HTML 和 JS 是分离的
+            // DOM0 级事件缺点：事件触发会被覆盖
+            console.log("点击了按钮");
+        }
+        var btn1 = document.getElementById("btn1");
+        btn1.addEventListener("click", function () {
+            // DOM2 级事件处理
+            // DOM2 级事件优点：不会被覆盖
+            // DOM2 级事件缺点：写起来麻烦
+            console.log("点击了按钮1");
+        })
+        btn1.addEventListener("click", function () {
+            // DOM2 级事件处理
+            console.log("点击了按钮2");
+        })
+    </script>
+</body>
+
+</html>
