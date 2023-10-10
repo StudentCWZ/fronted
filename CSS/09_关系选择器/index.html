@@ -1,0 +1,68 @@
+<!--
+ * @Software: Visual Studio Code
+ * @Author: StudentCWZ
+ * @Email: StudentCWZ@outlook.com
+ * @Date: 2023-10-10 08:54:06
+ * @Last Modified by: StudentCWZ
+ * @Description: 关系选择器
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>关系选择器</title>
+    <style>
+        /* 关系选择器分类 */
+        /* 后代选择器 */
+        /* 子代选择器 */
+        /* 相邻兄弟选择器 */
+        /* 通用兄弟选择器 */
+        ul li {
+            /* 后代选择器 */
+            color: red;
+        }
+
+        ul>li {
+            /* 子代选择器 */
+            color: green;
+        }
+
+        h3+p {
+            /* 相邻兄弟选择器 */
+            /* 只能向下选择，不能向上选择 */
+            color: darkmagenta;
+        }
+
+        h2~p {
+            /* 通用兄弟选择器 */
+            color: aquamarine;
+        }
+    </style>
+</head>
+
+<body>
+    <h3>我是标题</h3>
+    <p>我是内容1</p>
+    <p>我是内容2</p>
+    <ul>
+        <li>列表一</li>
+        <li>列表二</li>
+        <li>列表三</li>
+        <div>
+            <ol>
+                <li>列表四</li>
+                <li>列表五</li>
+            </ol>
+        </div>
+    </ul>
+    <h2>我是标题</h2>
+    <p>我是内容1</p>
+    <p>我是内容2</p>
+    <p>我是内容3</p>
+</body>
+
+</html>
