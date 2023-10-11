@@ -1,0 +1,40 @@
+<!--
+ * @Software: Visual Studio Code
+ * @Author: StudentCWZ
+ * @Email: StudentCWZ@outlook.com
+ * @Date: 2023-10-11 09:19:25
+ * @Last Modified by: StudentCWZ
+ * @Description: CSS 盒子模型
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS 盒子模型</title>、
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            background-color: rebeccapurple;
+            padding: 50px 10px;
+            border: 5px solid black;
+            margin: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 所有 HTML 元素可以看作盒子，在 CSS 中， "box model" 这一术语是用来设计和布局时使用 CSS 盒子，封装周围的 HTML 元素，它包括：外边距(margin)、边框(border)、内边距(padding)，和实际内容(content) -->
+    <!-- Margin(外边距)：清除边框外的区域，外边距是透明的 -->
+    <!-- Border(边框)：围绕在内边距和内容外的边框 -->
+    <!-- Padding(内边距)：清除内容周围的区域，内边距是透明的 -->
+    <!-- Content(内容)：在盒子内容，显示文本和图像 -->
+    <div>我是内容</div>
+    <p>我是 p 标签</p>
+</body>
+
+</html>
