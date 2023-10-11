@@ -1,0 +1,69 @@
+<!--
+ * @Software: Visual Studio Code
+ * @Author: StudentCWZ
+ * @Email: StudentCWZ@outlook.com
+ * @Date: 2023-10-11 10:10:30
+ * @Last Modified by: StudentCWZ
+ * @Description: Event 事件对象
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event 事件对象</title>
+    <style>
+        .root {
+            width: 200px;
+            height: 200px;
+            background-color: #999;
+        }
+
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <button id="btn">按钮</button>
+    <a href="https://itbaizhan.cm" id="it">百战</a>
+    <div class="root" id="root">
+        <div class="box" id="box"></div>
+    </div>
+    <script>
+        // 事件发生以后，会产生一个事件对象，作为参数传给监听函数
+        // Event 对象属性
+        var btn = document.getElementById("btn");
+        // Event 事件对象参数，其实就是参数
+        btn.onclick = function (event) {
+            console.log(event);
+            console.log(event.target);
+            event.target.innerHTML = "单击之后";
+            console.log(event.type);
+        }
+        // Event.target 属性返回事件当前所在节点
+        var it = document.getElementById("it");
+        it.onclick = function (event) {
+            event.preventDefault(); // 不会再跳转
+            console.log("点击了 A");
+        }
+        var root = document.getElementById("root");
+        var box = document.getElementById("box");
+        root.onclick = function () {
+            console.log("root");
+        }
+        box.onclick = function (event) {
+            // 只触发 box
+            event.stopPropagation();
+            console.log("box");
+        }
+    </script>
+</body>
+
+</html>
