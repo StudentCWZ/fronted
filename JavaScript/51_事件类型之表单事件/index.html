@@ -1,0 +1,68 @@
+<!--
+ * @Software: Visual Studio Code
+ * @Author: StudentCWZ
+ * @Email: StudentCWZ@outlook.com
+ * @Date: 2023-10-12 19:36:20
+ * @Last Modified by: StudentCWZ
+ * @Description: 事件类型之表单事件
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>事件类型之表单事件</title>
+</head>
+
+<body>
+    <input type="text" id="username">
+    <input type="text" id="password">
+    <form id="myForm" action="服务器地址" onsubmit="submitHandle">
+        <input type="text" name="username">
+        <button id="resetBtn">重置</button>
+        <button>提交表单</button>
+    </form>
+    <script>
+        // 表单事件是在使用表单元素及输入框元素可以监听的一系列事件
+        // input 事件
+        // select 事件
+        // Change 事件
+        // reset 事件
+        // submit 事件
+        /*
+            input 事件当 <input>、<select>、<textarea> 的值发生变化时触发。对于复选框(<input type=checkbox>)或单选框(<input type=radio>)，用户改变选项时，也会触发这个条件
+            input 事件的一个特点，就是会连续触发。比如，用户每按下一次按键，就会触发一次 input 事件
+        */
+        var username = document.getElementById("username");
+        username.oninput = function (event) {
+            console.log(event.target.value); // 读取数据
+        }
+        // select 事件
+        // select 事件当在 <input>、<textarea> 里面选中文本时触发
+        username.onselect = function (event) {
+            console.log(" 选中了");
+            console.log(event.target.value);
+        }
+        // Change 事件当 <input>、<select>、<textarea> 的值发生变化时触发。它与 input 事件最大的不同，就是不会连续触发，只有当全部修改完成才会触发
+        var password = document.getElementById("password");
+        password.onchange -= function (event) {
+            console.log(event.target.value);
+        }
+        // reset 事件和 submit 事件
+        // 这两个事件发生在表单对象 <form> 上，而不是发生在表单的成员上
+        // submit 事件当表单数据向服务器提交时触发。注意，submit 事件的发生对象时 <form> 元素，而不是 <button> 元素，因为提交的是表单，而不是按钮
+        var resetBtn = document.getElementById("resetBtn");
+        var myForm = document.getElementById("myForm");
+        resetBtn.onclick = function () {
+            myForm.reset(); // 触发在表单上：清空表单
+        }
+        function submitHandle() {
+            console.log("想做的事情");
+        }
+    </script>
+</body>
+
+</html>
