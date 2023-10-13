@@ -1,0 +1,57 @@
+<!--
+ * @Software: Visual Studio Code
+ * @Author: StudentCWZ
+ * @Email: StudentCWZ@outlook.com
+ * @Date: 2023-10-13 09:34:26
+ * @Last Modified by: StudentCWZ
+ * @Description: 定时器之 setTimeOut()
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>定时器之 setTimeOut()</title>
+</head>
+
+<body>
+    <script>
+        // JavaScript 提供定时执行代码的功能，叫做定时器(timer)，主要由 setTimeOut() 和 setInterval() 这两个函数来完成。它们向队列添加定时任务
+        // setTimeOut 函数用来指定某个函数或代码，在多少毫秒之后执行。他返回一个整数，表示定时器的编号，以后可以用来取消这个定时器
+        // setTimeOut 函数接受两个参数，第一个参数 func|code 是将要推行延迟执行的函数名或者一段代码，第二个参数 delay 是延迟执行的毫秒数
+        // 定时器是可以取消的
+        setTimeout(function () {
+            console.log("大家好，3 秒后执行");
+        }, 3000); // 这是毫秒
+        timer = setTimeout(function () {
+            console.log("大家好，5 秒后执行");
+        }, 5000); // 这是毫秒
+        // 取消定时器
+        clearTimeout(timer);
+        var name = "Jack";
+        var age = 20;
+        var user = {
+            name: "itbaizhan",
+            age: 18,
+            getName: function () {
+                // this 永远指向当前调用者
+                console.log(this.name);
+            },
+            getAge: function () {
+                var that = this;
+                // 特殊：此时 this 指向全局
+                setTimeout(function () {
+                    console.log(this.age);  // 20
+                    console.log(that.age);  // 18
+                }, 1000)
+            }
+        };
+        user.getName(); // itbaizhan
+        user.getAge(); // 20
+    </script>
+</body>
+
+</html>
