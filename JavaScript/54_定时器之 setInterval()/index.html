@@ -1,0 +1,50 @@
+<!--
+ * @Software: Visual Studio Code
+ * @Author: StudentCWZ
+ * @Email: StudentCWZ@outlook.com
+ * @Date: 2023-10-13 10:15:08
+ * @Last Modified by: StudentCWZ
+ * @Description: 定时器之 setInterval()
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>定时器之 setInterval()</title>
+    <style>
+        #someDiv {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="someDiv"></div>
+    <script>
+        // setInterval() 函数的用法与 setTimeOut() 完全一致，区别仅仅在于 setInterval 指定某个任务每隔一段时间就执行一次，也就是无限次执行
+        var i = 0;
+        setInterval(function () {
+            i++;
+            console.log(i);
+        }, 1000);
+        var div = document.getElementById("someDiv");
+        // opacity: 透明度
+        var opacity = 1;
+        var fader = setInterval(function () {
+            opacity -= 0.05;
+            if (opacity > 0) {
+                div.style.opacity = opacity;
+            } else {
+                clearInterval(fader);
+            }
+        }, 60)
+    </script>
+</body>
+
+</html>
