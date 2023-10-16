@@ -1,0 +1,67 @@
+<!--
+ * @Software: Visual Studio Code
+ * @Author: StudentCWZ
+ * @Email: StudentCWZ@outlook.com
+ * @Date: 2023-10-16 09:16:46
+ * @Last Modified by: StudentCWZ
+ * @Description: 节流(throttle)
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>节流(throttle)</title>
+    <style>
+        h3 {
+            height: 400px;
+        }
+    </style>
+</head>
+
+<body>
+    <h3>哈哈</h3>
+    <h3>哈哈</h3>
+    <h3>哈哈</h3>
+    <h3>哈哈</h3>
+    <h3>哈哈</h3>
+    <script>
+        // 节流严格算起来应该属于性能优化的知识，但实际上遇到的频率相当高，处理不当或者放任不管就容易引起浏览器卡死
+        /*
+            如果在限定时间内，不断触发滚动事件(比如某个用户闲着无聊，按住滚动不断的拖来拖去)，只要不停止触发，理论上就永远不会输出当前距离顶部的距离
+            但是如果产品同学的期望处理方案是：即使用户不断拖动滚动条，也能在某个时间间隔之后给出反馈呢？
+            其实很简单：我们可以设计一种类似控制阀门一样定期开发的函数。也就是让函数执行一次后，在某个时间段内暂时失效，过了这段时间后再重新激活(类似技能冷却时间)
+            效果：如果短时间内大量触发同一事件，那么在函数执行一次之后，该函数在指定期限不在工作，直至过了这段时间蔡崇信生效
+        */
+        // 这里接住 setTimeout 来做一个简单的实现，加一个状态位 valid 来表示当前函数是否处于工作状态
+        // 讲完这两个技巧，下面介绍一下平常开发中常遇到的场景:
+        /*
+            1. 输入框 input 事件，例如要支持输入实时搜索可以使用节流方案(间隔一段时间就必须查询相关内容)，或者
+               实现输入间隔大于某个值(如 500 ms)，就当做用户输入完成，然后开始搜索，具体使用哪种方案要看业务需求
+            2. 页面 resize 事件，常见于需要做页面适配的时候。需要根据最终呈现的页面情况进行 dom 渲染(这种情形一般是使用防抖，因为只需要判断最后一次的变化情况)
+        */
+        function throttle(fn, delay) {
+            var valid = true;
+            return function () {
+                if (!valid) {
+                    return false;
+                }
+                valid = false;
+                setTimeout(function () {
+                    fn();
+                    valid = true;
+                }, delay)
+            }
+        }
+        window.onscroll = throttle(scrollHandle, 2000)
+        function scrollHandle() {
+            var scrollTop = document.documentElement.scrollTop;
+            console.log(scrollTop);
+        }
+    </script>
+</body>
+
+</html>
