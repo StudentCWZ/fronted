@@ -1,0 +1,105 @@
+<!--
+ * @Software: Visual Studio Code
+ * @Author: StudentCWZ
+ * @Email: StudentCWZ@outlook.com
+ * @Date: 2023-10-18 08:38:14
+ * @Last Modified by: StudentCWZ
+ * @Description: 浮动
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>浮动</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 200px;
+            background-color: aqua;
+            float: left;
+            /* float: right; */
+            /* 脱离文档流 */
+        }
+
+        .container {
+            width: 400px;
+            height: 400px;
+            background-color: blueviolet;
+        }
+
+        img {
+            width: 300px;
+            float: left;
+        }
+
+        .container1 {
+            width: 700px;
+            height: 700px;
+            background-color: #666;
+        }
+
+        div {
+            width: 300px;
+            height: 300px;
+            float: left;
+        }
+
+        .box1 {
+            background-color: red;
+
+        }
+
+        .box2 {
+            background-color: blue;
+
+        }
+
+        .box3 {
+            background-color: green;
+
+        }
+
+        ul li {
+            float: left;
+            margin: 0 40px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 浮动 -->
+    <!-- float 属性定义与纳素在哪个方向浮动，任何元素都可以浮动 -->
+    <!-- left: 元素向左浮动 -->
+    <!-- right: 元素向右浮动 -->
+    <!-- 浮动的原理 -->
+    <!-- 浮动以后使元素脱离了文档流 -->
+    <!-- 浮动只有左右浮动，没有上下浮动 -->
+    <!-- 元素向左浮动 -->
+    <!-- 脱离文档流之后，元素相当于在页面上增加一个浮层来放置内容。此时可以理解为有两层页面，一层是底层的原页面，一层是脱离文档流的上层页面，所以会出现折叠现象 -->
+    <!-- 所有元素向右浮动 -->
+    <!-- 当所有元素同时浮动的时候，会变成水平摆放，向左或者向右 -->
+    <!-- 当容器不足以横向摆放内容时候，会在下一行摆放 -->
+    <div class="box"></div>
+    <div class="container"></div>
+    <div>
+        <img src="1.jpeg" alt="">
+        <img src="1.jpeg" alt="">
+    </div>
+    <div class="container1">
+        <div class="box1"></div>
+        <div class="box2"></div>
+        <div class="box3"></div>
+    </div>
+    <ul>
+        <li><a href="#">导航1</a></li>
+        <li><a href="#">导航2</a></li>
+        <li><a href="#">导航3</a></li>
+        <li><a href="#">导航4</a></li>
+    </ul>
+</body>
+
+</html>
