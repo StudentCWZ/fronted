@@ -1,0 +1,48 @@
+<!--
+ * @Software: Visual Studio Code
+ * @Author: StudentCWZ
+ * @Email: StudentCWZ@outlook.com
+ * @Date: 2023-10-19 09:19:59
+ * @Last Modified by: StudentCWZ
+ * @Description: Let 命令
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Let 命令</title>
+</head>
+
+<body>
+    <script>
+        // Es6 新增了 let 命令，用来声明变量。他的用法类似于 var，但是所声明得到变量，只在 let 命令所在代码块内有效
+        // let 块级作用域
+        // var 关键字：函数级的作用域
+        /*
+            let 关键字:
+                1. let 是块级作用域(花括号级的作用域)
+                2. let 不存在变量提升的
+                3. let 不允许在相同作用域，重复声明同一个变量
+        */
+        if (true) {
+            let i = 10;
+        }
+        console.log(i); // 报错
+        for (let i = 0; i < 10; i++) {
+            console.log(i);
+        }
+        var a = [];
+        for (var i = 0; i < 10; i++) {
+            a[i] = function () {
+                console.log(i);
+            };
+        }
+        a[6](); // 10 ==> var 换成 let 结果就为 6
+    </script>
+</body>
+
+</html>
