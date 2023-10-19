@@ -1,0 +1,85 @@
+<!--
+ * @Software: Visual Studio Code
+ * @Author: StudentCWZ
+ * @Email: StudentCWZ@outlook.com
+ * @Date: 2023-10-19 08:38:34
+ * @Last Modified by: StudentCWZ
+ * @Description: Babel 转码器
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Babel 转码器</title>
+</head>
+
+<body>
+    <script>
+        /*
+            Babel 是一个广泛使用的 ES6 转换器，可以将 ES6 代码转为 ES5 代码，从而在老版本的浏览器执行。这意味着，你可以用 ES6 的方式编写程序，又不用担心现有环境是否支持
+        */
+        // 转码示例：原始代码用了箭头函数，Babel 将其转为普通函数，就能在不支持箭头函数的 JavaScript 环境执行了
+        /*
+            input.map(item => item + 1); // 转码前
+
+            input.map(function (item)) { // 转码后
+                return item + 1;
+            };
+        */
+        /*
+            Babel 安装流程
+                - 1. 第一步：安装 Babel
+                    ```bash
+                        npm install --save-dev @babel/core
+                    ```
+                - 2. 第二步：配置文件
+                    ```bash
+                        Babel 的配置文件是 .bashrc 存放在项目的根目录下。使用 Babel 的第一步，就是配置这个文件
+                    ```
+                - 3. 该文件用来设置转码规则和插件，基本格式如下:
+                    ```
+                        {
+                            "presets": [],
+                            "plugins": [],
+                        }
+                    ```
+                - 4. 第三步： presets 字段设定转码规则，官方提供以下的规则集，你可以根据需要安装
+                    ```bash
+                        npm install --save-dev @babel/present-env
+                    ```
+                - 5. 第四步: 将规则加入 .bashrc
+                    ```bash
+                        {
+                            "presets": [
+                                "@babel/env"
+                            ],
+                            "plugins": []
+                        }
+                    ```
+                - 6. Babel 命令行转码
+                    - Babel 提供命令行工具 `@babel/cli`，用于命令行转码
+                        ```bash
+                            npm install --save-dev @babel/cli
+                        ```
+                - 7. 基本用法
+                    # 转码结果输出到标准输出
+                    npx babel example.js
+                    # 转码结果写入一个文件
+                    # --out-file 或 -o 参数指定输出文件
+                    npx babel example.js --out-file compiled.js
+                    # 或者
+                    npx label example.js -o complied.js
+                    # 整个目录转码
+                    # --out-dir 或 -d 参数指定输出目录
+                    npx babel src --out-dir lib
+                    # 或者
+                    npx babel src -d lib
+        */
+    </script>
+</body>
+
+</html>
