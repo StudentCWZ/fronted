@@ -1,0 +1,41 @@
+<!--
+ * @Software: Visual Studio Code
+ * @Author: StudentCWZ
+ * @Email: StudentCWZ@outlook.com
+ * @Date: 2023-10-20 08:52:06
+ * @Last Modified by: StudentCWZ
+ * @Description: 对象解构赋值
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>对象解构赋值</title>
+</head>
+
+<body>
+    <script>
+        // 解构可以用于对象
+        var user = {
+            name: "Jack",
+            age: 20
+        }
+        // 利用解构赋值简化他
+        const { name, age } = user;
+        console.log(name);
+        console.log(age);
+        // 对象的属性没有次序，变量必须与属性同名，才能取到正确的值
+        // 对象的解构赋值，可以很方便地将现有对象的方法，赋值到某个变量
+        const { abs, ceil, floor, random } = Math;
+        console.log(random());
+        // 注意事项：如果将一个已经声明的变量用于解构赋值，就必须非常小心
+        // let hello = "Hello";
+        // let { hello } = hello; 报错
+    </script>
+</body>
+
+</html>
