@@ -1,0 +1,74 @@
+<!--
+ * @Software: Visual Studio Code
+ * @Author: StudentCWZ
+ * @Email: StudentCWZ@outlook.com
+ * @Date: 2023-10-20 09:12:00
+ * @Last Modified by: StudentCWZ
+ * @Description: 清除浮动
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>清除浮动</title>
+    <style>
+        .container {
+            width: 500px;
+            /* 如果父元素高度塌陷，可以给父元素设置高度，撑开元素本身大小*/
+            /* height: 500px; */
+            background-color: #888;
+            /* overflow 清除浮动 */
+            /* overflow: hidden; */
+            /* clear: both; */
+        }
+
+        .container::after {
+            /* 伪对象方式清除浮动 */
+            content: "";
+            display: block;
+            clear: both;
+        }
+
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: aquamarine;
+            margin: 5px;
+            float: left;
+        }
+
+        .text {
+            width: 100px;
+            height: 100px;
+            background-color: blueviolet;
+            /* 受影响的元素增加 clear 属性 */
+            clear: both;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="text"></div>
+    </div>
+    <!-- 浮动副作用： -->
+    <!-- 当元素设置 float 浮动后，该元素就会脱离文档流并向左/向右浮动 -->
+    <!-- 1. 浮动元素会造成父元素高度塌陷 -->
+    <!-- 2. 后续元素会受到影响 -->
+    <!-- 清除浮动 -->
+    <!-- 当父元素出现塌陷的时候，对布局是不利的，所以我们必须清楚副作用 -->
+    <!-- 解决方案有很多种 -->
+    <!-- 1. 父元素设置高度 -->
+    <!-- 2. 受影响的元素增加 clear 属性 -->
+    <!-- 3. overflow 清除浮动 -->
+    <!-- 4. 伪对象方式 -->
+</body>
+
+</html>
