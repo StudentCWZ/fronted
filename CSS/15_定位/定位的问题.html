@@ -1,0 +1,45 @@
+<!--
+ * @Software: Visual Studio Code
+ * @Author: StudentCWZ
+ * @Email: StudentCWZ@outlook.com
+ * @Date: 2023-10-23 09:04:14
+ * @Last Modified by: StudentCWZ
+ * @Description: 定位的问题
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>定位的问题</title>
+    <style>
+        .container {
+            width: 200px;
+            height: 200px;
+            background-color: #888;
+            position: relative;
+            margin-left: 100px;
+        }
+
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: blueviolet;
+            position: absolute;
+            left: 50px;
+            top: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 设置定位之后，相对定位和绝对定位他是相对于具有定位的父级元素进行位置调整，如果父级元素不存在定位，则继续向上逐级寻找，直到顶层文档 -->
+    <div class="container">
+        <div class="box"></div>
+    </div>
+</body>
+
+</html>

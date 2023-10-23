@@ -1,0 +1,60 @@
+<!--
+ * @Software: Visual Studio Code
+ * @Author: StudentCWZ
+ * @Email: StudentCWZ@outlook.com
+ * @Date: 2023-10-23 09:04:14
+ * @Last Modified by: StudentCWZ
+ * @Description: 固定定位
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>固定定位</title>
+    <style>
+        .box1 {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            position: fixed;
+            bottom: 100px;
+            right: 100px;
+        }
+
+        .box2 {
+            width: 400px;
+            height: 400px;
+            background-color: blueviolet;
+        }
+
+        .box3 {
+            width: 200px;
+            height: 200px;
+            background-color: blue;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+        h3 {
+            height: 500px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 固定定位 -->
+    <!-- 设置定位之后，相对定位和绝对定位他是相对于具有定位的父级元素进行位置调整，如果父级元素不存在定位，则继续向上逐级寻找，直到顶层文档 -->
+    <div class="box1"></div>
+    <div class="box2"></div>
+    <div class="box3"></div>
+    <h3>哈哈哈</h3>
+    <h3>哈哈哈</h3>
+    <h3>哈哈哈</h3>
+</body>
+
+</html>
