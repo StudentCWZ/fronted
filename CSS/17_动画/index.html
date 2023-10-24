@@ -1,0 +1,84 @@
+<!--
+ * @Software: Visual Studio Code
+ * @Author: StudentCWZ
+ * @Email: StudentCWZ@outlook.com
+ * @Date: 2023-10-24 08:45:42
+ * @Last Modified by: StudentCWZ
+ * @Description: 动画
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>动画</title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            animation: myAnim 3s linear 0s infinite;
+        }
+
+        div:hover {
+            animation-play-state: paused;
+        }
+
+        @keyframes myAnim {
+            0% {
+                width: 200px;
+                background-color: red;
+            }
+
+            25% {
+                width: 300px;
+                background-color: blue;
+            }
+
+            50% {
+                width: 400px;
+                background-color: green;
+            }
+
+            75% {
+                width: 300px;
+                background-color: blue;
+            }
+
+            100% {
+                width: 200px;
+                background-color: red;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 动画是使元素从一种样式逐渐变化为另一种样式的效果 -->
+    <!-- 您可以改变任意多的样式人一多的次数 -->
+    <!-- 请用百分比来规定变化发生的时间，或用关键词 "from" 和 "to"，等同于 0 % 和100 % -->
+    <!-- 0 % 是动画的开始，100 % 是动画的完成 -->
+    <!-- 使用 @keyframes 规则，你可以创建动画 -->
+    <!-- animation 执行动画 -->
+    <!-- name: 设置动画的名称 -->
+    <!-- duration 设置动画的持续时间 -->
+    <!-- timing-function 设置动画效果的速率 -->
+    <!-- delay 设置动画的开始时间(延时执行) -->
+    <!-- iteration-count 设置动画循环的次数，infinite 为无限次数的循环 -->
+    <!-- direction 设置动画播放的方向 -->
+    <!-- animation-play-state 控制动画的播放状态: running 代表播放，而 paused 代表播放-->
+    <!-- timing-function 值 -->
+    <!-- ease 逐渐变慢 -->
+    <!-- linear 匀速 -->
+    <!-- ease-in 加速 -->
+    <!-- ease-out 减速 -->
+    <!-- ease-in-out 先加速后减速 -->
+    <!-- direction 默认值为 normal 表示向前播放 -->
+    <!-- alternate 动画播放在第偶数次向前播放，第奇数次向反方向播放 -->
+    <div></div>
+</body>
+
+</html>
