@@ -1,0 +1,41 @@
+<!--
+ * @Software: Visual Studio Code
+ * @Author: StudentCWZ
+ * @Email: StudentCWZ@outlook.com
+ * @Date: 2023-10-24 09:42:49
+ * @Last Modified by: StudentCWZ
+ * @Description: 雪碧图
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>雪碧图</title>
+    <style>
+        span {
+            display: block;
+            width: 20px;
+            height: 25px;
+            background-image: url(1.webp);
+            border: 1px solid aqua;
+            background-position: -5px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- CSS Sprite 也叫 CSS 精灵图、CSS 雪碧图，是一种网页图片应用处理方式。它允许你将一个页面涉及到的所有零星图片都包含到一张大图中去-->
+    <!-- 优点 -->
+    <!-- 减少图片的字节 -->
+    <!-- 减少网页的 http 请求，从而大大提高页面的性能 -->
+    <!-- 原理 -->
+    <!-- 通过 background-image 引入背景图片 -->
+    <!-- 通过 background-position 把背景图片移动到自己需要的位置 -->
+    <span class="icon"></span>
+</body>
+
+</html>
