@@ -1,0 +1,89 @@
+<!--
+ * @Software: Visual Studio Code
+ * @Author: StudentCWZ
+ * @Email: StudentCWZ@outlook.com
+ * @Date: 2023-10-24 09:19:14
+ * @Last Modified by: StudentCWZ
+ * @Description: 媒体查询
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>媒体查询</title>
+    <style>
+        .box {
+            width: 300px;
+            height: 300px;
+        }
+
+        @media screen and (max-width: 768px) {
+
+            /*手机*/
+            .box {
+                background-color: aqua;
+            }
+
+            .p1 {
+                display: none;
+            }
+
+            .p2 {
+                display: none;
+            }
+        }
+
+        @media screen and (min-width: 768px) and (max-width: 996px) {
+
+            /*平板*/
+            .box {
+                background-color: chartreuse;
+            }
+
+            .p1 {
+                display: none;
+            }
+
+            .p2 {
+                display: block;
+            }
+        }
+
+        @media screen and (min-width: 996px) {
+
+            /*电脑*/
+            .box {
+                background-color: red;
+            }
+
+            .p1 {
+                display: block;
+            }
+
+            .p2 {
+                display: block;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- 媒体查询能使在不同终端设备下达到不同的效果 -->
+    <!-- 媒体查询会根据设备的大小自动识别加载不同的样式 -->
+    <!-- 设置 meta 标签 -->
+    <!-- 使用设备的宽度作为视图宽度并禁止初始的缩放。在 <head> 标签里加入这个 meta 标签 -->
+    <!-- width = device-width -->
+    <!-- initial-scale 初始缩放比例(默认设置为 1.0) -->
+    <!-- maximum-scale 允许用户所房到最大比例(默认设置为 1.0) -->
+    <!-- user-scalable 用户是否可以手动缩放(默认设置为 no) -->
+    <div class="box"></div>
+    <p class="p1">哈哈哈</p>
+    <p class="p2">呵呵呵</p>
+</body>
+
+</html>
