@@ -1,0 +1,63 @@
+<!--
+ * @Software: Visual Studio Code
+ * @Author: StudentCWZ
+ * @Email: StudentCWZ@outlook.com
+ * @Date: 2023-10-30 09:08:55
+ * @Last Modified by: StudentCWZ
+ * @Description: 新增方法
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>新增方法</title>
+</head>
+
+<body>
+    <h3>标题1</h3>
+    <h3>标题2</h3>
+    <h3>标题3</h3>
+    <script>
+        // Array.from()
+        // Array.from 方法用于将类数组转为真正得到数组
+        // 常见类数组有三类：
+        // arguments
+        // 元素集合
+        // 类似数组的对象
+        // arguments
+        function add() {
+            // 类数组、伪数组，只能使用数组的读取方式和 length 属性，不能使用数组方法：push(举例)
+            console.log(arguments); // 读取到 10, 20, 30
+            console.log(arguments[0]);
+            console.log(arguments[1]);
+            console.log(arguments[2]);
+            // arguments.push(40); 报错
+            console.log(Array.form(arguments));
+        }
+        add(10, 20, 30)
+        // 元素集合的伪数组
+        let titles = document.querySelectorAll("h3");
+        console.log(titles[0]);
+        console.log(titles[1]);
+        console.log(Array.form(titles));
+
+        var user = {
+            "0": "Jack",
+            "1": 20,
+            "2": "男",
+            length: 3
+        }
+        console.log(user["0"]);
+        console.log(user.length);
+        console.log(Array.form(user));
+        // Array.of()
+        // Array.of(3, 11, 8) // [3, 11, 8]
+        console.log(Array.of(10, 20, 30));  // [10, 20, 30]
+    </script>
+</body>
+
+</html>
