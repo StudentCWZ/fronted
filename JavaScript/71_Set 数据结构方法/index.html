@@ -1,0 +1,43 @@
+<!--
+ * @Software: Visual Studio Code
+ * @Author: StudentCWZ
+ * @Email: StudentCWZ@outlook.com
+ * @Date: 2023-10-31 09:10:06
+ * @Last Modified by: StudentCWZ
+ * @Description: Set 数据结构方法
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Set 数据结构方法</title>
+</head>
+
+<body>
+    <script>
+        // add() 方法
+        // set 添加方法
+        var s = new Set();
+        s.add(100);
+        console.log(s);
+        // delete()
+        // 删除某个值，返回一个布尔值，表示删除是否
+        var mySet = new Set();
+        mySet.add("5")
+        var flag = mySet.delete("5");
+        console.log(flag); // true
+        // has()
+        // 返回一个布尔值，表示该值是否为 Set 成员
+        mySet.add(200);
+        var f = mySet.has(200);
+        console.log(f); // true
+        mySet.clear();
+        console.log(mySet);
+    </script>
+</body>
+
+</html>
