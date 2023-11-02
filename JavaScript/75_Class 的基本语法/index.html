@@ -1,0 +1,54 @@
+<!--
+ * @Software: Visual Studio Code
+ * @Author: StudentCWZ
+ * @Email: StudentCWZ@outlook.com
+ * @Date: 2023-11-02 08:33:34
+ * @Last Modified by: StudentCWZ
+ * @Description: Class 的基本语法
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class 的基本语法</title>
+</head>
+
+<body>
+    <script>
+        // JavaScript 语言中，生成实例对象的传统方法是通过构造函数
+        // ES5 类的表现形式
+        function Person(name, age) {
+            this.name = name;
+            this.age = age;
+        }
+        Person.prototype.getName = function () {
+            console.log(this.name);
+        }
+        var p = new Person("Jack", 20);
+        p.getName();
+        // ES6 类的表现形式
+        // ES6 提供了更接近传统语言的写法，引入了 Class(类) 这个概念，作为对象的模板。通过 Class 关键字，可以定义类
+        // 基本上，ES6 的 class 可以看作只是一个语法糖，他的绝大部份功能，ES5 都可以做到，新的 class 写法只是让对象原型的写法更加清晰、更像面向对象编程的语法而已
+        // constructor() 方法是类的默认方式，通过 new 命令生成对象实例时，自动调用该方法。一个类必须有 constructor() 方法，如果没有显式定义，一个空的 constructor() 方法会被默认添加
+        // 生成类的实例的写法，与 ES5 完全一样，也是使用 new 命令
+        // 注意点: 类不存在变量提升，这一点与 ES5 完全不同
+        class Student {
+            constructor(name, age) {
+                this.name = name;
+                this.age = age;
+            }
+
+            getName() {
+                console.log(this.name);
+            }
+        }
+        var s = new Student("Jack", 20);
+        p.getName();
+    </script>
+</body>
+
+</html>
