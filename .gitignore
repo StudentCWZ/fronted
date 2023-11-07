@@ -20,3 +20,6 @@ tests/e2e/reports
 
 package-lock.json
 yarn.lock
+
+# 子文件 node_modules 忽略
+02_Vue 开发前的准备/node_modules/
