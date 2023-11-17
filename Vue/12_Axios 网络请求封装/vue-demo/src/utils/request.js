@@ -11,7 +11,7 @@ import axios from "axios";
 import querystring from "querystring";
 
 
-const errorHandler = (status, info) => {
+const errorHandle = (status, info) => {
     switch (status) {
         case 400:
             console.log("语义有误");
@@ -43,7 +43,7 @@ const instance = axios.create({
     timeout: 5000,
 })
 
-// 拦截器最常用的
+// 拦截器最常用
 
 // 发送数据之前
 instance.interceptors.request.use(
@@ -55,7 +55,9 @@ instance.interceptors.request.use(
         console.log(config);
         return config;
     },
-    error => Promise.reject(error),
+    error => {
+        return Promise.reject(error)
+    }
 );
 
 
@@ -67,8 +69,7 @@ instance.interceptors.response.use(
     error => {
         const { response } = error;
         // 错误的处理才是我们需要最关注的
-        errorHandler(response.status, response.info);
-
+        errorHandle(response.status, response.info);
     },
 );
 
