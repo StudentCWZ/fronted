@@ -19,7 +19,7 @@
 
 <script>
 
-import { mapGetters, mapMutations } from "vuex"
+import { mapGetters, mapMutations, mapActions } from "vuex"
 
 
 export default {
@@ -32,12 +32,13 @@ export default {
     },
     methods: {
         ...mapMutations(['addCounter']),
+        ...mapActions(['asyncAddCounter']),
         addClickHandle() {
             // 固定调用方式
-            this.addCounter(20)
+            this.addCounter(20);
         },
         addAsyncClickHandle() {
-            this.$store.dispatch("asyncAddCounter")
+            this.asyncAddCounter();
         }
     }
 }
